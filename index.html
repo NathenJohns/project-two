@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Premier League Stats Dashboard</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/dc.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+    
+    
+    <script type="text/javascript" src="assets/js/d3.min.js"></script>
+    <script type="text/javascript" src="assets/js/crossfilter.min.js"></script>
+    <script type="text/javascript" src="assets/js/dc.min.js"></script>
+    <script type="text/javascript" src="assets/js/queue.min.js"></script>
+    <script type="text/javascript" src="assets/js/graph.js"></script>
+
+</head>
+
+<body>
+    
+<!--                     Navigation              -->
+
+    <nav class="navbar navbar-default navbar-color">
+        <div class="container-fluid">
+            <div>
+                <a href="#" class="navbar-header navbar-left"><img src="assets/images/premier-league-logo.png">Premier League 2017/18 Season Stats</a>
+            </div>
+        </div>
+    </nav>
+
+<!--                    Tables Section            -->
+
+<!--                    Premier League Table  -->
+    
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="table-headers">Premier League Table 2017/18</h3>
+                    <table class="premier-league-table">
+                        <tr class="table-titles">
+                            <th>Position</th>
+                            <th>Team</th>
+                            <th>Played</th> 
+                            <th>Points</th>
+                        </tr>
+                        <tr class="number-one-position">
+                            <td>1</td>
+                            <td>Manchester City</td>
+                            <td>38</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="second-fourth">
+                            <td>2</td>
+                            <td>Manchester United</td>
+                            <td>38</td>
+                            <td>81</td>
+                        </tr>
+                        <tr class="second-fourth">
+                            <td>3</td>
+                            <td>Tottenham Hotspur</td>
+                            <td>38</td>
+                            <td>77</td>
+                        </tr>
+                        <tr class="second-fourth">
+                            <td>4</td>
+                            <td>Liverpool</td>
+                            <td>38</td>
+                            <td>75</td>
+                        </tr>
+                        <tr class="fifth-seventh">
+                            <td>5</td>
+                            <td>Chelsea</td>
+                            <td>38</td>
+                            <td>70</td>
+                        </tr>
+                        <tr class="fifth-seventh">
+                            <td>6</td>
+                            <td>Arsenal</td>
+                            <td>38</td>
+                            <td>63</td>
+                        </tr>
+                        <tr class="fifth-seventh">
+                            <td>7</td>
+                            <td>Burnley</td>
+                            <td>38</td>
+                            <td>54</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Everton</td>
+                            <td>38</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Leceister City</td>
+                            <td>38</td>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Newcastle</td>
+                            <td>38</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Crystal Palace</td>
+                            <td>38</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Bournemouth</td>
+                            <td>38</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>West Ham</td>
+                            <td>38</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Watford</td>
+                            <td>38</td>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Brighton</td>
+                            <td>38</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Huddersfield</td>
+                            <td>38</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Southampton</td>
+                            <td>38</td>
+                            <td>36</td>
+                        </tr>
+                        <tr class="bottom-teams">
+                            <td>18</td>
+                            <td>Swansea City</td>
+                            <td>38</td>
+                            <td>33</td>
+                        </tr>
+                        <tr class="bottom-teams">
+                            <td>19</td>
+                            <td>Stoke City</td>
+                            <td>38</td>
+                            <td>33</td>
+                        </tr>
+                        <tr class="bottom-teams">
+                            <td>20</td>
+                            <td>West Brom</td>
+                            <td>38</td>
+                            <td>31</td>
+                        </tr>
+                    </table>
+                </div>
+                
+<!--    Goalscorers Table -->
+
+                <div class="col-lg-4">
+                    <h3 class="table-headers">Top Scorers 2017/18</h3>
+                    <table class="goalscorers-table">
+                        <tr class="table-titles">
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Goals Scored</th> 
+                        </tr>
+                        <tr>
+                            <td>M.Salah</td>
+                            <td>Liverpool</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>H.Kane</td>
+                            <td>Tottenham Hotspur</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>S.Agüero</td>
+                            <td>Manchester City</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>J.Vardy</td>
+                            <td>Leicester City</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>R.Sterling</td>
+                            <td>Manchester City</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>R.Lukaku</td>
+                            <td>Manchester United</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>R.Firmino</td>
+                            <td>Liverpool</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>A.Lacaszette</td>
+                            <td>Arsenal</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>G.Jesus</td>
+                            <td>Manchester City</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>E.Hazard</td>
+                            <td>Chelsea</td>
+                            <td>12</td>
+                        </tr>
+                    </table>
+                </div>
+                
+<!--      Goalkeepers Table  -->
+
+                <div class="col-lg-4">
+                    <h3 class="table-headers">Top Goalkeepers 2017/18</h3>
+                    <table class="cleansheets-table">
+                        <tr class="table-titles">
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Cleansheets</th> 
+                        </tr>
+                        <tr>
+                            <td>De Gea</td>
+                            <td>Manchester United</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Ederson</td>
+                            <td>Manchester City</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Courtois</td>
+                            <td>Chelsea</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Lloris</td>
+                            <td>Totteham Hotspur</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Cech</td>
+                            <td>Arsenal</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Pope</td>
+                            <td>Burnley</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Foster</td>
+                            <td>West Brom</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Karius</td>
+                            <td>Liverpool</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Lössl</td>
+                            <td>Huddersfield</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Pickford</td>
+                            <td>Everton</td>
+                            <td>10</td>
+                        </tr>
+                    </table>
+                 </div>
+            </div>
+        </div>
+    </section>
+    
+<!--                 Selector Menu   -->
+        
+    <section>
+        <div class="container">
+            <div class="row">
+                <h4 class="selector-header">Select a Team</h4>
+                <div id="team-selector"></div>
+            </div>
+        </div>
+    </section>
+    
+<!--               Money Charts    -->
+        
+    <section class="section">
+        <div class="container">
+            <div class="row money-charts-row">
+                <h2 class="money-charts-header">Expenditure of Teams 2017/18 Season</h2>
+                <div class="col-lg-6">
+                    <h3 class="money-charts-subheader">Total Spend Per Club in millions(£)</h3>
+                    <div id="expenditure-chart"></div>
+                </div>
+                    
+                <div class="col-lg-6">
+                    <h3 class="money-charts-subheader">Total Spent to Wins Ratio</h3>
+                    <div id="wins-expenditure-balance"></div>
+                </div>
+                <p>Teams that spent more money bringing in new players won more games than teams that spent less, and therefore finished higher in the League.</p>
+            </div>
+        </div>
+    </section>
+    
+<!--             Attacking Charts   -->
+        
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <h2 class="attacking-charts-header">Attacking Charts</h3>
+                <div class="col-lg-6">
+                    <h3 class="attacking-charts-subheader">Goals to Shots Ratio</h3>
+                    <div id="goals-balance"></div>
+                    <p>Teams that have more shots over the Season will score more goals.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="attacking-charts-subheader">Possession to Wins Ratio</h3>
+                    <div id="wins-possession-balance"></div>
+                    <p>Teams that have more possession on the ball over the course of a game will win more often than those who have less of the ball per game.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--             Defensive Charts    -->
+        
+    <section>
+        <div class="container">
+            <div class="row">
+                <h2 class="defensive-charts-header">Defensive Charts</h2>
+                    <h3 class="defensive-charts-subheader">Total Tackles Won Per Club</h3>
+                    <div id="tackles-chart"></div>
+                    <p>There doesn't appear to be any correlation between the amount of tackles a team makes per season and overall position in the table.</p>
+                    <p>This is probably because teams in the lower half of the table are required to tackle more often, with top teams having higher ball retention. Teams in the top half will press high and commit to tackles to retrieve the ball once lost.</p>
+                </div>
+            </div>
+    </section>
+        
+    <section>
+        <div class="container">
+            <div class="row">
+                <h3 class="defensive-charts-subheader">Total Cleansheets Per Club</h3>
+                <div id="cleansheets-chart"></div>
+                <p>Teams with more cleansheets in the Season will appear higher in the table.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <div class="row">
+                <h3 class="defensive-charts-subheader">Total Goals Conceded Per Club</h3>
+                <div id="conceded-chart"></div>
+                <p>Teams that concede the fewest goals over the season will be more likely to finish in a higher position than teams that concede more.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
