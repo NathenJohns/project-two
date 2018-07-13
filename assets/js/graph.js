@@ -39,7 +39,10 @@ function show_team_selector(ndx) {
     
     dc.selectMenu("#team-selector")
         .dimension(dim)
-        .group(group);
+        .group(group)
+        .title(function(d){
+            return d.key;
+        })
 }
 
 //Team Expenditure Pie Chart
