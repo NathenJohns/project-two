@@ -42,7 +42,7 @@ function show_team_selector(ndx) {
         .group(group)
         .title(function(d){
             return d.key;
-        })
+        });
 }
 
 //Team Expenditure Pie Chart
