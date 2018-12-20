@@ -8,17 +8,18 @@ The site can be located at https://nathenjohns.github.io/project-two/
 Testing for this project was kept within the Code Editor (Cloud9) and when deployed on Google Chrome using their dev tools.
 As the code is interactive and requires Javascript, dev tools on Google Chrome was used to work and test functionality and the Console (using Console Log) within the code was used
 to see if the progam ran into errors. There was regular use of trial and error.
+
 Other programming languages were not required.
 
 ## Prerequisites
 None
 
 ## Built With
-*HTML
-*CSS
-*Javascript
-*d3
-*dc
+* HTML
+* CSS
+* Javascript
+* d3
+* dc
 
 ## Authors
 Nathen Johns - [NathenJohns](https://github.com/NathenJohns)
