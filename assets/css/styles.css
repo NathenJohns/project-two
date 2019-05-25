@@ -80,10 +80,14 @@ tr, td {
 
 .introduction {
     text-align: center;
+    font-family: "Roboto";
+    margin-bottom: 10px;
 }
 
 .introduction h3 {
-    font-weight: 700;
+    font-weight: 600;
+    font-family: "Roboto";
+    color: #ff015b;
 }
 
 /*          Sections & Paragraphs        */
