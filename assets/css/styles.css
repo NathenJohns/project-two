@@ -81,13 +81,15 @@ tr, td {
 .introduction {
     text-align: center;
     font-family: "Roboto";
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
-.introduction h3 {
+.introduction h2 {
     font-weight: 600;
     font-family: "Roboto";
     color: #ff015b;
+    text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
 /*          Sections & Paragraphs        */
