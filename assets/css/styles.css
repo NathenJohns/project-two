@@ -76,6 +76,16 @@ tr, td {
     background-color: #f23434;
 }
 
+/*          Introduction                 */
+
+.introduction {
+    text-align: center;
+}
+
+.introduction h3 {
+    font-weight: 700;
+}
+
 /*          Sections & Paragraphs        */
 
 .section {
